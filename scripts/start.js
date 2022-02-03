@@ -8,7 +8,7 @@ async function main() {
   await keyboardTxn1.wait();
 
   const keyboardTx2 = await keyboardsContract.connect(somebodyElse).create("An even better keyboard!");
-  await keyboardTx2.wait();
+  await keyboardTx2.wait(); 
 
   keyboards = await keyboardsContract.getKeyboards();
   console.log("We got the keyboards!", keyboards);
